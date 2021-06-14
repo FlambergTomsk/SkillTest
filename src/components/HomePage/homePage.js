@@ -33,14 +33,16 @@ let heroesArray = props.heroes.map((hero, index) =>{
   return <div key={index} className = {h.block} > 
   <div className = {h.name}>{hero.name}</div>
   <div  className = {h.name}>{hero.gender}	</div>
-  <img src = {`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}   className = {h.picture}/>	
-
+  <div  className = {h.picture} style = {{backgroundImage:  `url(https://starwars-visualguide.com/assets/img/characters/${id}.jpg)` }} > 
   <div className= {props.choosen.some(elem=>elem.name===hero.name)? h.selected + ' ' + h.like : h.like} 
   onClick = {(e)=>{
     addColorToStar(e); 
     props.choosen.some(elem=>elem.name===hero.name)? props.delChoosen(hero): props.addChoosen(hero); 
   } } >   &#9733;	</div>
+  </div> 	
   </div>
+  
+
 });
 
 return (
@@ -53,7 +55,7 @@ return (
         >{page}</span>
       })}
     </div>
-    <div> {props.loading ? <Preloader /> : null}</div>
+    <div className = {h.preloader}> {props.loading ? <Preloader /> : null}</div>
     <div className = {h.space}></div>
     <Search {...props}/>
     <h3 className = {h.head}>Choose your favorite Star Wars hero</h3>

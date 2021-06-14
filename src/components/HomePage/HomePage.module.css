@@ -14,23 +14,31 @@ left: 0;
 
 background-size: 200%;
 color: rgb(48, 218, 26);
-font-size:small;
+font-size:large;
 background-size: cover;
 
 }
 
 .picture{
-    width: 50%;
-    height: 50%;
-    margin-left: 25%;
+    background-size: contain;
+    width: 150px;
+    height: 300px;
+    margin-left: 30%;
+    /* margin-left: 25%; */
+
     position: relative;
+    background-repeat: no-repeat;
+    background-position:center;
+
     }
 
 .block {
     margin-top: 20px;
     display: inline-block;
-    width: 20%;
+    width: 300px;
     position: relative;
+    /* border: 1px solid gold; */
+
     }
 
 .selected.like {
@@ -55,10 +63,8 @@ span:hover:not(.selected){background-color: rgb(224, 121, 24);}
     color: gold;
     font-size:xx-large;
     position: absolute;
-    top: 25px;
-    right: 65px;
-    left: auto;
-    z-index: 100;
+    right: 0;
+    margin-top: 25%;
 }
 
 .favorite{
@@ -81,7 +87,7 @@ span:hover:not(.selected){background-color: rgb(224, 121, 24);}
 
   .head{
       text-align: center;
-      margin-top: 30px;
+      margin-top: 5;
       color: goldenrod;
   }
 
@@ -101,4 +107,8 @@ span:hover:not(.selected){background-color: rgb(224, 121, 24);}
 
 .space {
     height: 20px;
+}
+
+.preloader{
+    margin-left: 10%;
 }

@@ -1,0 +1,104 @@
+.body{
+
+background: url('https://acegif.com/wp-content/gifs/starfall-gif-29.gif');
+background-size: 100%;
+min-height: 600px;
+min-width: 600px;
+
+width: 100%;
+height: auto;
+position:-ms-page;
+top: 0;
+left: 0;
+
+
+background-size: 200%;
+color: rgb(48, 218, 26);
+font-size:small;
+background-size: cover;
+
+}
+
+.picture{
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+    position: relative;
+    }
+
+.block {
+    margin-top: 20px;
+    display: inline-block;
+    width: 20%;
+    position: relative;
+    }
+
+.selected.like {
+  color:brown;
+  
+}
+span:hover:not(.selected){background-color: rgb(224, 121, 24);}
+
+.selected {
+    color:brown;
+  }
+
+.pages{
+    float: right;
+    margin-top: 20px;
+    margin-right: 30px;
+
+}
+
+
+.like{
+    color: gold;
+    font-size:xx-large;
+    position: absolute;
+    top: 25px;
+    right: 65px;
+    left: auto;
+    z-index: 100;
+}
+
+.favorite{
+    color: red;
+}
+
+
+
+.name{
+    text-align: center;
+
+}
+.red-background {
+    background: red;
+  }
+  
+  .default-background {
+    background: white;
+  }
+
+  .head{
+      text-align: center;
+      margin-top: 30px;
+      color: goldenrod;
+  }
+
+  .favoriteBlock{
+      margin-top: 700px;
+      display: inline-block;
+      width: 20%;
+      position: relative;
+      margin: 0 auto;
+  }
+.headInFavorite{
+    text-align: center;
+    color: goldenrod;
+    margin-top: 100px;
+  }
+
+
+.space {
+    height: 20px;
+}

@@ -1,19 +1,21 @@
 import React, { useState } from 'react'
 import s from './Search.module.css';
-import Fuse from "fuse.js";
-import { getHeroesArray } from '../HomePage/HomePageSelectors';
-import {connect} from "react-redux";
-import { getHeroes } from '../../redux/homePageReducer';
 
 
 const Search = (props) => {
 
-    const [searchValue, setSearchValue] = useState('');
+    const [searchValue, setSearchLocalValue] = useState('');
+
+
+
 
     function searchHeroes(e){
-      setSearchValue(e.target.value);
+      setSearchLocalValue(e.target.value);
+      props.changePage(1);
       props.getHeroes(props.currentPage, e.target.value);
-    }
+      props.setSearchValue(e.target.value);
+
+      }
 
     
   

@@ -27,5 +27,5 @@ export const getChoosenArray = (state)=>{
 };
 
 export const getSearchValue = (state)=>{
-  return state.homePage.serchValue
+  return state.homePage.searchValue
 }

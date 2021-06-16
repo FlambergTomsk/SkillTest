@@ -1,4 +1,4 @@
-import { addChoosen, changePage, delChoosen, getHeroes } from '../../redux/homePageReducer'
+import { addChoosen, changePage, delChoosen, getHeroes, setSearchValue } from '../../redux/homePageReducer'
 import {connect} from "react-redux";
 import { getCurrentPage, getHeroesArray, getLoading, getPageSize, getTotalCountNumber, getChoosenArray, getSearchValue } from './HomePageSelectors';
 import h from './HomePage.module.css';
@@ -13,9 +13,10 @@ React.useEffect(()=>{
 props.getHeroes(props.currentPage, props.searchValue)
 },[])
 
-const onPageChange = (page)=>{
+const onPageChange = (page )=>{
   props.changePage(page);
   props.getHeroes(page, props.searchValue);
+  console.log(props.searchValue)
 }
 
 function addColorToStar(e){
@@ -49,8 +50,8 @@ return (
   
 <div className = {h.body}>
     <div className = {h.pages} > Pages with heroes: 
-      {pages.map(page => {
-        return <span className = {props.currentPage === page && h.selected}
+      {pages.map((page, index) => {
+        return <span key={index} className = {props.currentPage === page? h.selected: null}
           onClick={() => { onPageChange(page) }}
         >{page}</span>
       })}
@@ -81,5 +82,5 @@ let mapStateToProps = (state)=>{
 
 
 export default 
-connect(mapStateToProps,  {getHeroes, changePage, addChoosen, delChoosen})(HomePage);
+connect(mapStateToProps,  {getHeroes, changePage, addChoosen, delChoosen, setSearchValue})(HomePage);
 

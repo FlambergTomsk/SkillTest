@@ -11,7 +11,7 @@ const FavoriteHeroes=(props)=> {
         return <div key={index} className = {h.block} > 
         <div className = {h.name}>{hero.name}</div>
         <div  className = {h.name}>{hero.gender}</div>
-        <img src = {`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}  className = {h.picture}/>
+        <img src = {`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`}  className = {h.picture} alt = ''/>
         </div>
     
     });

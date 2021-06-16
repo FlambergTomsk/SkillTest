@@ -7,7 +7,7 @@ const Preloader = (props) => {
 
   return (<div>
     
-    <img src= {loadingAva} className = {h.loading}/>
+    <img src= {loadingAva} className = {h.loading} alt= ''/>
     
 
   </div>)

@@ -28,6 +28,7 @@ const homePageReducer = (state = initialState, action) => {
         case SET_HEROES: {
             return { ...state, heroes: action.heroes }
         };
+        
         case SET_CHOOSEN_HEROES: {
             return { ...state, choosen: action.choosenHeroes}
         };
@@ -63,11 +64,11 @@ const homePageReducer = (state = initialState, action) => {
 export default homePageReducer;
 
 
-    export const setHeroes = (heroes) => ({ type: SET_HEROES, heroes });
+    const setHeroes = (heroes) => ({ type: SET_HEROES, heroes });
     const setChoosenHeroes = (choosenHeroes) => ({ type: SET_CHOOSEN_HEROES, choosenHeroes });
-    export const getTotalCount = (totalCount) => ({ type: GET_TOTAL_COUNT, totalCount })
+    const getTotalCount = (totalCount) => ({ type: GET_TOTAL_COUNT, totalCount })
     export const changePage = (page) => ({ type: CHANGE_PAGE, page });
-    export const isLoading = (loading) => ({ type: IS_LOADING, loading });
+    const isLoading = (loading) => ({ type: IS_LOADING, loading });
     const addChoosenAC = (choosen) => ({ type: ADD_CHOOSEN, choosen });
     const delChoosenAC = (choosen) => ({ type: DEL_CHOOSEN, choosen });
     export const setSearchValue = (searchValue) => ({ type: SET_SEARCH_VALUE, searchValue })

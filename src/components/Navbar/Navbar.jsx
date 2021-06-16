@@ -4,7 +4,6 @@ import { NavLink} from 'react-router-dom';
 
 
 function Navbar (props){ 
-//  let navElements = props.sideBar.friends.map(friend => <SideBar name={friend.name} image={friend.image} />)
   return (
     <nav className={s.nav}>
       <div>
